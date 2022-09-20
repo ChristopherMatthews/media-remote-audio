@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Simulates a SoundCloud resource where the thumbnail size is derived from the URL.
+-->
+<oembed>
+    <version type="float">1.0</version>
+    <type>rich</type>
+    <provider-name>SoundCloud</provider-name>
+    <provider-url>https://soundcloud.com</provider-url>
+    <height type="integer">400</height>
+    <width>100%</width>
+    <title>Drum And Bass Style - DJ &amp; Studio Mix - 2016 / 2017 by DJ Aphrodite</title>
+    <description>2016 to 2017 DJ and Studio Mix.
+        A proper mix up of recent tunes, favourites and classics.</description>
+    <thumbnail-url>https://i1.sndcdn.com/artworks-000199665517-s4ylni-t500x500.jpg</thumbnail-url>
+    <html>&lt;![CDATA[&lt;iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F299122044&amp;show_artwork=true"&gt;&lt;/iframe&gt;]]&gt;</html>
+    <author-name>DJ Aphrodite</author-name>
+    <author-url>https://soundcloud.com/dj-aphrodite</author-url>
+</oembed>

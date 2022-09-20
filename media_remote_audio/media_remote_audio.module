@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Implements hook_media_source_info_alter() for the following providers: SoundCloud and Spotify.
+ */
+
+use Drupal\media\Plugin\media\Source\OEmbed;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function media_remote_audio_help($route_name, RouteMatchInterface $arg) {
+  switch ($route_name) {
+    case 'help.page.media_remote_audio':
+      $output = '';
+      $output .= '<p>' . t('Creates a Remote audio Media type for easily adding oEmbed audio from Spotify or SoundCloud.') . '</p>';
+      return ['#markup' => $output];
+  }
+}
+
+/**
+ * Implements hook_media_source_info_alter().
+ */
+function media_remote_audio_media_source_info_alter(array &$definitions) {
+  $definitions['oembed:audio'] = [
+    'id' => 'oembed:audio',
+    'label' => t('Remote audio'),
+    'description' => t('Stream audio from SoundCloud, Spotify, and iHeartRadio.'),
+    'allowed_field_types' => ['string'],
+    'default_name_metadata_attribute' => 'default_name',
+    'default_thumbnail_filename' => 'no-thumbnail.png',
+    'thumbnail_uri_metadata_attribute' => 'thumbnail_uri',
+    'providers' => ['iHeartRadio', 'SoundCloud', 'Spotify'],
+    'class' => OEmbed::class,
+    'provider' => 'media_remote_audio',
+  ];
+  if (Drupal::moduleHandler()->moduleExists('media_library')) {
+    $definitions['oembed:audio']['forms']['media_library_add'] = '\Drupal\media_library\Form\OEmbedForm';
+  }
+}

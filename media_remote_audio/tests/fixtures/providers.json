@@ -1,0 +1,44 @@
+[
+  {
+    "provider_name": "iHeartRadio",
+    "provider_url": "https://www.iheart.com",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://www.iheart.com/podcast/*/*"
+        ],
+        "url": "https://www.iheart.com/oembed",
+        "discovery": true
+      }
+    ]
+  },
+  {
+    "provider_name": "SoundCloud",
+    "provider_url": "http://soundcloud.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "http://soundcloud.com/*",
+          "https://soundcloud.com/*",
+          "https://on.soundcloud.com/*",
+          "https://soundcloud.app.goog.gl/*"
+        ],
+        "url": "https://soundcloud.com/oembed"
+      }
+    ]
+  },
+  {
+    "provider_name": "Spotify",
+    "provider_url": "https://spotify.com/",
+    "endpoints": [
+      {
+        "schemes": [
+          "https://open.spotify.com/*",
+          "spotify:*"
+        ],
+        "url": "https://open.spotify.com/oembed",
+        "discovery": true
+      }
+    ]
+  }
+]

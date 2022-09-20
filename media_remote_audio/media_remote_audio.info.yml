@@ -1,0 +1,7 @@
+name: 'Remote Audio'
+type: module
+package: 'Media'
+core_version_requirement: ^9.2.9 || ^10
+description: 'Provides a media source for SoundCloud, Spotify, and iHeartRadio via oEmbed.'
+dependencies:
+  - drupal:media

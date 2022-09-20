@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_remote_audio
+id: remote_audio
+label: 'Remote audio'
+description: 'A remotely hosted audio file from SoundCloud, Spotify, or iHeartRadio.'
+source: 'oembed:audio'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
+  source_field: field_media_oembed_audio
+field_map: {  }
